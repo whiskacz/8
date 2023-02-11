@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP</title>
+    <style>
+        .sunset{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            left: 10vw;
+            bottom: 8vh;
+            z-index: 2;
+
+        }
+        .grass{
+            width: 100%;
+            height: 20vh;
+            background-color: green;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sunset"></div>
+    <div class="grass"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+    TweenMax.to('.sunset', 4, {x:600,  })
+    TweenMax.to('.sunset', 2, {y:-300, repeat: 1, yoyo: true})
+    </script>
+</body>
+</html>
